@@ -42,5 +42,8 @@ build:
   run:
       - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/download/v0.0.1/pget" 
       - chmod +x /usr/local/bin/pget
+      - wget https://github.com/ninja-build/ninja/releases/download/v1.10.2/ninja-linux.zip
+      - unzip ninja-linux.zip -d /usr/local/bin/
+      - update-alternatives --install /usr/bin/ninja ninja /usr/local/bin/ninja 1 --force
 
 predict: "predict.py:Predictor"
