@@ -11,12 +11,10 @@ from utils.file_utils import download_model
 from cog import BasePredictor, Input, Path
 
 
-
 CHECKPOINT_URLS = [
-    ("https://storage.googleapis.com/replicate-weights/DreamGaussian/sd-2-1.tar", "/src/stable-diffusion-2-1-base"),
-    ("https://storage.googleapis.com/replicate-weights/DreamGaussian/zero123-xl.tar", "/src/zero123-xl-diffusers")
+    ("https://weights.replicate.delivery/default/DreamGaussian/sd-2-1.tar", "/src/stable-diffusion-2-1-base"),
+    ("https://weights.replicate.delivery/default/DreamGaussian/zero123-xl.tar", "/src/zero123-xl-diffusers")
 ]
-
 
 def create_from_text(prompt, ref_size, elevation, iters, iters_refine, num_pts):
     try:
